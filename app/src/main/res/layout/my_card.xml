@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtName"
+            style="@style/txtNameStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toRightOf="@id/imgCart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            style="@style/txtDiscountStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/discount_edittxt"
+            android:text="$ 10 Discount"
+            android:padding="6dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelPrice"
+            style="@style/txtNameStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/price"
+            app:layout_constraintLeft_toRightOf="@id/imgCart"
+            app:layout_constraintTop_toBottomOf="@id/txtName" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            style="@style/txtNameStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/labelPrice"
+            app:layout_constraintTop_toBottomOf="@id/txtName" />
+
+        <Button
+            android:id="@+id/Btn_Minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnall"
+            android:text="@string/minus"
+            android:textColor="#ffffff"
+            app:layout_constraintLeft_toRightOf="@id/imgCart"
+            app:layout_constraintTop_toBottomOf="@id/labelPrice" />
+
+        <TextView
+            android:id="@+id/txtKg"
+            style="@style/txtKgStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/Btn_Minus"
+            app:layout_constraintTop_toBottomOf="@id/labelPrice" />
+
+        <TextView
+            android:id="@+id/labelKg"
+            style="@style/txtKgStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Kg"
+            app:layout_constraintLeft_toRightOf="@id/txtKg"
+            app:layout_constraintTop_toBottomOf="@id/txtPrice" />
+
+        <Button
+            android:id="@+id/Btn_Add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnall"
+            android:text="+"
+            android:textColor="#ffffff"
+            app:layout_constraintLeft_toRightOf="@id/labelKg"
+            app:layout_constraintTop_toBottomOf="@id/txtPrice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
